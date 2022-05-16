@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header img {
+  width: 250px;
+  margin: 20px;
+}
+
+header .lieu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 50px;
+}
+
+header .lieu i {
+  margin-right: 15px;
+}
+
+header .lieu p {
+  font-size: 16px;
+}
+
+#etapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+#etapes .reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px;
+  gap: 1em;
+}
+
+#etapes .reservation h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#etapes .reservation p {
+  font-size: 18px;
+}
+
+#etapes .reservation .button {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+}
+
+#etapes .fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#etapes .fonctionnement ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#etapes .fonctionnement ul i {
+  margin-right: 15px;
+}
+
+#etapes .fonctionnement ul li {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px;
+  padding: 25px;
+  background-color: #e5e5e5;
+  border-radius: 18px;
+  -webkit-box-shadow: 4px 4px 9px 2px #adadad;
+          box-shadow: 4px 4px 9px 2px #adadad;
+}
+
+#etapes .fonctionnement ul li:hover {
+  background-color: #9356DC;
+  opacity: 0.2;
+}
+
+.button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 6px 8px #d1d1d1;
+          box-shadow: 0px 6px 8px #d1d1d1;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.button:hover {
+  background: #9356dc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: $color-body;
+  margin: 0;
+}
+
+.loader {
+  background-color: white;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: dissapear 2s forwards;
+}
+.loaderIcon {
+  // CREATION DU LOADER 
+  border: 10px solid #99E2D0;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  // PLACEMENNT DU LOADER AU MILIEU DE LA PAGE
+  margin: auto;
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  // ANIMATION
+  animation: loader-spin 2s linear;
+}

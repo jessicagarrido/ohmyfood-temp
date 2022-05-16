@@ -1,0 +1,16 @@
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+@mixin btnhover {
+  background: #9356dc;
+  background-image: -webkit-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -moz-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -ms-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -o-linear-gradient(top, #9356dc, #ff79da);
+  background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+  text-decoration: none;
+}

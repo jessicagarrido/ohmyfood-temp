@@ -1,0 +1,22 @@
+
+// A GARDER
+.fa-heart{
+  position: absolute;
+      font-size: 24px;
+      right: 8%;
+      top: 79%;
+  
+  &:hover{
+    animation: heart-bg 0.3s;
+    font-weight: 900;
+    background:-webkit-linear-gradient(13deg, rgba(255,121,218,1) 0%, rgba(186,98,219,1) 66%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  }
+ } 
+
+ .titleHeart {
+   position: inherit;
+   padding-left: 30px;
+ }

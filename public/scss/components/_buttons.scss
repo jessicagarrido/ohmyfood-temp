@@ -1,0 +1,40 @@
+.button {
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0px 6px 8px #d1d1d1;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 15px;
+}
+.button:hover {
+  @include btnhover;
+}
+
+.commandButton {
+  @include flexbox; 
+  padding-bottom: 6%; 
+}
+.command {
+  background: linear-gradient(to bottom, #ff79da 5%, #9356dc 100%);
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 15px;
+  width: 250px;
+  margin-top: 30px;
+}
+.command:hover {
+  @include btnhover;
+}
+
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+  .command {
+    width: 56%;
+    margin: 12%;
+    font-size: 15px;
+  }
+}

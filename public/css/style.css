@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.loader {
+  background-color: white;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: dissapear 2s forwards;
+}
+
+.loaderIcon {
+  border: 10px solid #99E2D0;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: loader-spin 2s linear;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dissapear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes menufade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart-bg {
+  0% {
+    background: -webkit-linear-gradient(13deg, rgba(255, 121, 217, 0) 0%, rgba(187, 98, 219, 0) 66%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(13deg, rgba(255, 121, 217, 0.582) 0%, rgba(186, 98, 219, 0.582) 66%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(13deg, rgb(255, 121, 218) 0%, rgb(186, 98, 219) 66%);
+    font-weight: 900;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes iconeSpin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.button {
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0px 6px 8px #d1d1d1;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.button:hover {
+  background: #9356dc;
+  background-image: -webkit-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -moz-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -ms-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -o-linear-gradient(top, #9356dc, #ff79da);
+  background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+  text-decoration: none;
+}
+
+.commandButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 6%;
+}
+
+.command {
+  background: linear-gradient(to bottom, #ff79da 5%, #9356dc 100%);
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 15px;
+  width: 250px;
+  margin-top: 30px;
+}
+
+.command:hover {
+  background: #9356dc;
+  background-image: -webkit-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -moz-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -ms-linear-gradient(top, #9356dc, #ff79da);
+  background-image: -o-linear-gradient(top, #9356dc, #ff79da);
+  background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+  .command {
+    width: 56%;
+    margin: 12%;
+    font-size: 15px;
+  }
+}
+.fa-heart {
+  position: absolute;
+  font-size: 24px;
+  right: 8%;
+  top: 79%;
+}
+.fa-heart:hover {
+  animation: heart-bg 0.3s;
+  font-weight: 900;
+  background: -webkit-linear-gradient(13deg, rgb(255, 121, 218) 0%, rgb(186, 98, 219) 66%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleHeart {
+  position: inherit;
+  padding-left: 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+header .headerRestaurants {
+  display: flex;
+  align-items: center;
+}
+header .fa-arrow-left-long {
+  margin-left: -20px;
+}
+header img {
+  width: 250px;
+  margin: 20px;
+}
+header .lieu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 50px;
+}
+header .lieu i {
+  margin-right: 14px;
+}
+header .lieu p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+  header img {
+    width: 150px;
+    margin: 15px;
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(55, 59, 59);
+  color: azure;
+  padding: 10px;
+}
+footer .omfFont {
+  font-size: 20px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  margin-left: 10px;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  margin: 10px;
+}
+footer ul .footerIcons {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  footer .omfFont {
+    margin: 20px auto 20px 20px;
+  }
+  footer ul {
+    flex-direction: column;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 320px) {
+  footer {
+    padding-top: 25px;
+  }
+  footer .omfFont {
+    font-size: 20px;
+    font-family: "Shrikhand", cursive;
+    margin: 0 auto 0 15px;
+    font-weight: normal;
+  }
+  footer ul {
+    flex-direction: column;
+    margin-right: auto;
+  }
+  footer .footerIcons {
+    margin-right: 5px;
+  }
+}
+main img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+main .menu {
+  background-color: #f2f2f2;
+  padding-top: 30px;
+  border-radius: 20px 20px 0 0;
+  margin-top: -16px;
+  position: relative;
+}
+main .menu h1 {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+main .titreMenus {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 20px;
+  border-bottom: 3px solid #85dde9;
+  width: 40px;
+  margin: 20px auto;
+}
+main .menuList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .delay1 {
+  animation: menufade 2s;
+  animation-delay: 0.2s;
+}
+main .delay2 {
+  animation: menufade 2s;
+  animation-delay: 0.4s;
+}
+main .delay3 {
+  animation: menufade 2s;
+  animation-delay: 0.6s;
+}
+main .menuDetail {
+  display: flex;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+  margin: 20px 15px;
+  padding-left: 15px;
+  border-radius: 18px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  height: 100px;
+  width: 400px;
+  overflow: hidden;
+}
+main .menuText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .menuText h3 {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .menuText p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .price {
+  font-size: 15px;
+  font-weight: bold;
+  height: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+main .check-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #99E2D0;
+  height: 100%;
+  border-radius: 0 18px 18px 0;
+  margin-right: -77px;
+  width: 20%;
+}
+main .fa-check {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 18px;
+  width: 30px;
+  height: 30px;
+}
+main .menuDetail:hover .check-box {
+  transition: all 1s;
+  margin-right: 0;
+}
+main .menuDetail:hover .check-box .fa-check {
+  animation: iconeSpin 1s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  main .titreMenus {
+    margin: auto 15px 35px 20px;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 320px) {
+  main img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  main .menu {
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -16px;
+    position: relative;
+  }
+  main .menu h1 {
+    text-align: start;
+    font-family: "Shrikhand", cursive;
+    font-weight: 100;
+    font-size: 22px;
+    margin: 20px 20px 50px;
+  }
+  main .titreMenus {
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 3px solid #85dde9;
+    width: 40px;
+    margin: 25px auto 7px 15px;
+  }
+  main .menuList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .menuDetail {
+    width: 305px;
+    margin: 8px;
+    height: 75px;
+  }
+  main h3 {
+    font-size: 14px;
+  }
+  main p {
+    font-size: 13px;
+  }
+  main .price {
+    font-size: 14px;
+    margin-right: 35px;
+    margin-bottom: -35px;
+  }
+}
+#etapes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+#etapes .reservation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(0deg, 3%, 92%);
+  width: 100%;
+  margin: 0;
+  padding: 40px;
+  gap: 1em;
+}
+#etapes .reservation h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+#etapes .reservation p {
+  font-size: 18px;
+  text-align: center;
+}
+#etapes .reservation .button {
+  font-size: 18px;
+  width: auto;
+}
+#etapes .fonctionnement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+#etapes .fonctionnement ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  counter-reset: compteur;
+}
+#etapes .fonctionnement ul i {
+  margin-right: 15px;
+}
+#etapes .fonctionnement ul li {
+  display: flex;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px;
+  padding: 25px;
+  background-color: #e5e5e5;
+  border-radius: 18px;
+  box-shadow: 4px 4px 9px 2px #adadad;
+  width: 280px;
+}
+#etapes .fonctionnement ul li:hover {
+  background-color: rgb(237, 223, 240);
+  color: #9356DC;
+}
+#etapes .fonctionnement ul p:hover {
+  color: black;
+}
+#etapes .fonctionnement ul li::before {
+  counter-increment: compteur;
+  content: counter(compteur);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  margin-left: -33px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+#restaurants {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+#restaurants h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px;
+}
+#restaurants nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+#restaurants a {
+  border-radius: 16px;
+  box-shadow: 3px 3px 9px 0px #adadad;
+  height: 320px;
+  width: 33%;
+  position: relative;
+}
+#restaurants a img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  height: 70%;
+}
+#restaurants a span {
+  background-color: #99E2D0;
+  color: rgb(15, 131, 15);
+  box-shadow: 3px 3px 10px 0 #b9b7b7;
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  right: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#restaurants a h2 {
+  font-size: 20px;
+  text-align: left;
+  margin: 10px auto 0 20px;
+}
+#restaurants a p {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  .fonctionnement ul {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  #restaurants a {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 320px) {
+  #etapes .reservation {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  #etapes .reservation h1 {
+    font-size: 24px;
+  }
+  #etapes .reservation p {
+    font-size: 15px;
+    width: 300px;
+    text-align: center;
+  }
+  #etapes .reservation .button {
+    font-size: 14px;
+    width: auto;
+  }
+  #etapes .fonctionnement .homeTitles {
+    font-size: 19px;
+    margin: auto auto 19px 24px;
+  }
+  #etapes .fonctionnement ul {
+    padding-bottom: 35px;
+  }
+  #etapes .fonctionnement ul li {
+    font-size: 15px;
+    margin: 11px;
+    padding: 25px;
+    box-shadow: 3px 3px 9px 0px #adadad;
+    width: 265px;
+  }
+  #etapes .fonctionnement ul li:hover {
+    background-color: rgb(237, 223, 240);
+    color: #9356DC;
+  }
+
+  #restaurants {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #e5e5e5;
+    padding: 20px 0 50px 0;
+    margin: 0;
+  }
+  #restaurants .homeTitles {
+    font-size: 19px;
+    margin: 20px auto 19px 24px;
+  }
+  #restaurants nav {
+    gap: 1em;
+  }
+  #restaurants a {
+    border-radius: 16px;
+    height: 210px;
+    width: 90%;
+    position: relative;
+  }
+  #restaurants a img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    height: 70%;
+  }
+  #restaurants a span {
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #restaurants a h2 {
+    font-size: 15px;
+    text-align: left;
+  }
+  #restaurants a p {
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

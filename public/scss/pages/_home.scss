@@ -1,0 +1,231 @@
+#etapes {
+  @include flexbox;
+  gap: 1em;
+
+  .reservation {
+    @include flexbox;
+    background-color: hsl(0, 3%, 92%);
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    gap: 1em;
+
+    & h1 {
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+    }
+    & p {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .button {
+      font-size: 18px;
+      width: auto;
+    }
+  }
+
+  .fonctionnement {
+    @include flexbox;
+    margin-top: 50px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      counter-reset: compteur;
+      & i {
+        margin-right: 15px;
+      }
+      & li {
+        display: flex;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 20px;
+        padding: 25px;
+        background-color: #e5e5e5;
+        border-radius: 18px;
+        box-shadow: 4px 4px 9px 2px #adadad;
+        width: 280px;
+      }
+      & li:hover {
+        background-color: rgb(237, 223, 240);
+        color: $color-secondary;
+      }
+      & p:hover {
+        color: black;
+      }
+      & li::before {
+        counter-increment: compteur;
+        content: counter(compteur);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        margin-left: -33px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+#restaurants {
+  @include flexbox;
+  margin: 20px;
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 40px;
+  }
+  & nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  & a {
+    border-radius: 16px;
+    box-shadow: 3px 3px 9px 0px #adadad;
+    height: 320px;
+    width: 33%;
+    position: relative;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 16px 16px 0 0;
+      height: 70%;
+    }
+    & span {
+      background-color: $color-tertiary;
+      color: rgb(15, 131, 15);
+      box-shadow: 3px 3px 10px 0 #b9b7b7;
+      position: absolute;
+      padding: 10px;
+      top: 10px;
+      right: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    & h2 {
+      font-size: 20px;
+      text-align: left;
+      margin: 10px auto 0 20px;
+    }
+
+    & p {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  }
+}
+
+
+// VERSION TABLETTE 
+
+@media screen and (min-width: 320px) and (max-width: 765px) {
+  .fonctionnement {
+    ul {
+    flex-direction: column;
+    margin-bottom: 50px
+  }
+  }
+  
+  #restaurants {
+    a {
+    width: 100%;
+  }
+  }
+  
+}
+
+// VERSION MOBILE
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+  #etapes {
+    .reservation {
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+
+      & h1 {
+        font-size: 24px;
+      }
+      & p {
+        font-size: 15px;
+        width: 300px;
+        text-align: center;
+      }
+      & .button {
+        font-size: 14px;
+        width: auto;
+      }
+    }
+    .fonctionnement {
+      & .homeTitles {
+        font-size: 19px;
+        margin: auto auto 19px 24px;
+      }
+      ul {
+        padding-bottom: 35px;
+        & li {
+          font-size: 15px;
+          margin: 11px;
+          padding: 25px;
+          box-shadow: 3px 3px 9px 0px #adadad;
+          width: 265px;
+        }
+        & li:hover {
+          background-color: rgb(237, 223, 240);
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  #restaurants {
+    @include flexbox;
+    width: 100%;
+    background-color: $color-header;
+    padding: 20px 0 50px 0;
+    margin: 0;
+    & .homeTitles {
+      font-size: 19px;
+      margin: 20px auto 19px 24px;
+    }
+    & nav {
+      gap: 1em;
+    }
+    & a {
+      border-radius: 16px;
+      height: 210px;
+      width: 90%;
+      position: relative;
+      & img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+        height: 70%;
+      }
+      & span {
+        padding: 6px;
+        border-radius: 5px;
+        font-size: 13px;
+      }
+      & h2 {
+        font-size: 15px;
+        text-align: left;
+      }
+
+      & p {
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+  }
+}

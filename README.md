@@ -1,4 +1,6 @@
-# 🍽️ OhMyFood – Project 3 
+# 🍽️ OhMyFood 
+<img width="114" alt="17069637720332_Capture d’écran 2024-02-03 à 14 35 07" src="https://github.com/user-attachments/assets/410b2567-046e-4d55-ab25-8f82d7eca230" />
+
 ## 💻 OpenClassrooms Web Developer Path
 
 > 🌐 Mobile-first website for a fictional restaurant start-up  

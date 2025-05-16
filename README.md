@@ -1,4 +1,5 @@
-# 🍽️ OhMyFood – Project 3 | OpenClassrooms Web Developer Path
+# 🍽️ OhMyFood – Project 3 
+## 💻 OpenClassrooms Web Developer Path
 
 > 🌐 Mobile-first website for a fictional restaurant start-up  
 > 🎓 Third project in the [OpenClassrooms Web Developer training](https://openclassrooms.com/)
